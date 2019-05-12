@@ -1,17 +1,8 @@
 package br.com.cadastro.exames.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class Exame {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
 	private String codigo;
 	private String nome;
 	private String descricao;
@@ -22,6 +13,14 @@ public class Exame {
 
 	public Exame(String codigo, String nome, String descricao) {
 		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.descricao = descricao;
+	}
+	
+	public Exame(long id, String codigo, String nome, String descricao) {
+		super();
+		this.id = id;
 		this.codigo = codigo;
 		this.nome = nome;
 		this.descricao = descricao;

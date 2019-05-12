@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+  
+<struts>
+  
+  <constant name="struts.devMode" value="true" />
+  <constant name="struts.objectFactory" value="spring" />
+  <constant name="struts.ui.theme" value="simple" />
+  <constant name="struts.action.extension" value="" />
+  
+  <package name="default" namespace="/" extends="struts-default">
+  	<default-action-ref name="index"></default-action-ref>
+  	<action name="index">
+  		<result type="redirectAction">exames</result>
+  	</action>
+    <action name="exames" class="br.com.cadastro.exames.controller.ExameAction" method="execute">
+      <result name="success">/lista_exames.jsp</result>
+    </action>
+  </package>
+</struts>

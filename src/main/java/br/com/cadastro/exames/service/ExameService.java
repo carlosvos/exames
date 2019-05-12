@@ -1,10 +1,10 @@
-package br.com.cadastro.exames.dao;
+package br.com.cadastro.exames.service;
 
 import java.util.List;
 
 import br.com.cadastro.exames.model.Exame;
 
-public interface ExameDAO {
+public interface ExameService {
 	
 	void salvar(Exame exame);
 	void atualizar(Exame exame);

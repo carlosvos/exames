@@ -1,0 +1,1 @@
+<jsp:forward page="lista_exames.jsp"></jsp:forward>
