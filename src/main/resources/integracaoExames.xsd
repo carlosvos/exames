@@ -1,0 +1,33 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="https://www.integracaoexames.com.br/xml/exame"
+	targetNamespace="https://www.integracaoexames.com.br/xml/exame"
+	elementFormDefault="qualified">
+
+	<xs:element name="BuscaExameRequisicao">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element nillable="true" name="id" type="xs:long" />
+				<xs:element nillable="true" name="codigo"
+					type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ExameResposta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Exame" type="tns:Exame" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Exame">
+		<xs:sequence>
+			<xs:element name="id" type="xs:long" />
+			<xs:element name="codigo" type="xs:string" />
+			<xs:element name="nome" type="xs:string" />
+			<xs:element name="descricao" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
