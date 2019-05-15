@@ -44,8 +44,14 @@
 				<label for="descricaoInput">Descrição</label> 
 				<s:textfield name="exame.descricao" type="text" class="form-control" id="descricaoInput"></s:textfield>
 			</div>
-			<s:submit class="mt-4 btn btn-primary btn-lg" value="Salvar"></s:submit>
+			<s:submit class="mt-4 mr-3 btn btn-primary btn-lg" value="Salvar"></s:submit>
+			
+			<s:a class="mt-4 btn btn-secondary btn-lg" role="button" action="exames">
+				<i class="mr-2 fas fa-long-arrow-alt-left"></i> Voltar
+			</s:a>
 		</s:form>
+		
+		
 		</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
