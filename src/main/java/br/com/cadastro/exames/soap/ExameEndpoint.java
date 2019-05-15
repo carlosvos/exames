@@ -32,16 +32,4 @@ public class ExameEndpoint {
 		return response;
 	}
 	
-	/**@PayloadRoot(namespace = NAMESPACE_URI, localPart = "BuscaExamePorCodigo")
-	@ResponsePayload
-	public ExameResposta buscaPorCodigo(@RequestPayload BuscaExameRequisicao request) {
-		ExameResposta response = new ExameResposta();
-		Exame exame = exameService.buscarPorCodigo(request.getCodigo());
-		if(exame != null){
-			br.com.cadastro.exames.integration.Exame exameIntegration = new br.com.cadastro.exames.integration.Exame();
-			BeanUtils.copyProperties(exame, exameIntegration);
-			response.setExame(exameIntegration);
-		}
-		return response;
-	}**/
 }

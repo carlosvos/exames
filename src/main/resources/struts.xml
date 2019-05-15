@@ -2,22 +2,32 @@
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
-  
+
 <struts>
-  
-  <constant name="struts.devMode" value="true" />
-  <constant name="struts.objectFactory" value="spring" />
-  <constant name="struts.ui.theme" value="simple" />
-  <constant name="struts.action.extension" value="" />
-  <constant name="struts.action.excludePattern" value="/service/.*" />
-  
-  <package name="default" namespace="/" extends="struts-default">
-  	<default-action-ref name="index"></default-action-ref>
-  	<action name="index">
-  		<result type="redirectAction">exames</result>
-  	</action>
-    <action name="exames" class="br.com.cadastro.exames.controller.ExameAction" method="execute">
-      <result name="success">/lista_exames.jsp</result>
-    </action>
-  </package>
+
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.action.extension" value="" />
+	<constant name="struts.action.excludePattern"
+		value="/service/.*" />
+
+	<package name="default" namespace="/" extends="struts-default">
+		<default-action-ref name="index"></default-action-ref>
+		<action name="index">
+			<result type="redirectAction">exames</result>
+		</action>
+		<action name="exames" class="br.com.cadastro.exames.controller.ExameAction" method="execute">
+			<result name="success">/lista_exames.jsp</result>
+		</action>
+		<action name="carregar" class="br.com.cadastro.exames.controller.ExameAction" method="carregarExame">
+			<result name="success">/form_exame.jsp</result>
+		</action>
+		<action name="salvar" class="br.com.cadastro.exames.controller.ExameAction" method="salvarExame">
+			<result name="success" type="redirectAction">exames</result>
+		</action>
+		<action name="remover" class="br.com.cadastro.exames.controller.ExameAction" method="removerExame">
+			<result name="success" type="redirectAction">exames</result>
+		</action>
+	</package>
 </struts>
